@@ -1,0 +1,25 @@
+{
+  "name": "probonopartners",
+  "version": "1.0.0",
+  "description": "## Usage",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmcswain/probonopartners.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnmcswain/probonopartners/issues"
+  },
+  "homepage": "https://github.com/johnmcswain/probonopartners#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "webpack-stream": "^3.2.0"
+  }
+}
