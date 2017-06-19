@@ -3,3 +3,4 @@
  */
 
 var config = require("./config");
+var xmlLoader = require("./js/xmlLoader");

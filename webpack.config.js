@@ -3,12 +3,12 @@ const path = require('path');
 const config = {
     entry: './src/app.js',
     output: {
-        path: path.resolve(__dirname, 'www/js'),
+        path: path.resolve(__dirname, './src/js/output/'),
         filename: 'bundle.js'
     },
     module: {
         rules: [
-            {test: /\.txt$/, use: 'raw-loader'}
+            {test: /\.js$/, use: 'raw-loader'}
         ]
     }
 };

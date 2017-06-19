@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var minifyCSS = require('gulp-csso');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 var webpack = require('webpack-stream');
 
 gulp.task('css',function(){
@@ -11,7 +13,18 @@ gulp.task('css',function(){
 gulp.task('webpack', function() {
     return gulp.src('./src/app.js')
         .pipe(webpack(require('./webpack.config.js')))
-        .pipe(gulp.dest('./www/js/'));
+        .pipe(gulp.dest('./src/js/output/'));
 });
 
-gulp.task('default',['css','webpack']);
+gulp.task('compress', function (cb) {
+    pump([
+            gulp.src('./src/js/output/bundle.js'),
+            uglify(),
+            gulp.dest('./www/js/')
+        ],
+        cb
+    );
+
+});
+
+gulp.task('default',['css','webpack','compress']);

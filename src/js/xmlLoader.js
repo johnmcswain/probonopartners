@@ -3,6 +3,9 @@
  */
 
 
-var xmlLoader = {}
 
-export default xmlLoader;
+module.exports = function() {
+
+            console.log("yep");
+
+}
