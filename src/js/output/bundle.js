@@ -49,8 +49,20 @@
 	 */
 
 	var config = __webpack_require__(1);
-	var xmlLoader = __webpack_require__(2);
+	console.log(config.dataFeed);
 
+	function xmlLoader(){
+	    $.ajax({
+	        url: config.dataFeed
+	    }).done(function(data) {
+	        console.log(data);
+	        var xmlDoc = $.parseXML( data );
+	        var $xml = $( xmlDoc );
+	        $("#content").text($xml);
+	    });
+	}
+
+	//xmlLoader();
 
 /***/ }),
 /* 1 */
@@ -60,24 +72,12 @@
 	 * Created by johnmcswain on 6/18/17.
 	 */
 
+	module.exports = {
 
+	    dataFeed: "http://www.pbpatl.com/feed"
 
+	};
 
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-	/**
-	 * Created by johnmcswain on 6/18/17.
-	 */
-
-
-
-	module.exports = function() {
-
-	            console.log("yep");
-
-	}
 
 /***/ })
 /******/ ]);

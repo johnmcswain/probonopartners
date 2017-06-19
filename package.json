@@ -5,10 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compress": "gulp",
-    "build": "cordova build",
-    "android-emulate": "cordova build android",
-    "ios-emulate": "cordova build ios"
+    "prep": "gulp",
+    "platform-deploy": "cordova build"
   },
   "repository": {
     "type": "git",
