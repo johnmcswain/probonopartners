@@ -16,4 +16,4 @@ function xmlLoader(){
     });
 }
 
-//xmlLoader();
+xmlLoader();
