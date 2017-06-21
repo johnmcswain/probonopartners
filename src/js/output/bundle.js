@@ -51,7 +51,7 @@
 	var config = __webpack_require__(1);
 	console.log(config.dataFeed);
 
-	function xmlLoader(){
+	function feedLoader(){
 	    $.ajax({
 	        url: config.dataFeed
 	    }).done(function(data) {
@@ -59,7 +59,7 @@
 	    });
 	}
 
-	xmlLoader();
+	feedLoader();
 
 /***/ }),
 /* 1 */
@@ -70,7 +70,7 @@
 	 */
 
 	module.exports = {
-	    dataFeed: "http://pbpatlanta.us-east-1.elasticbeanstalk.com:3002/"
+	    dataFeed: "http://dimalpzodor05.cloudfront.net"
 	};
 
 
