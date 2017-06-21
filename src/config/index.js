@@ -3,5 +3,5 @@
  */
 
 module.exports = {
-    dataFeed: "http://pbpatlanta.us-east-1.elasticbeanstalk.com:3002/"
+    dataFeed: "http://dimalpzodor05.cloudfront.net"
 };

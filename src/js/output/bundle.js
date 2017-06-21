@@ -55,10 +55,7 @@
 	    $.ajax({
 	        url: config.dataFeed
 	    }).done(function(data) {
-	        console.log(data);
-	        var xmlDoc = $.parseXML( data );
-	        var $xml = $( xmlDoc );
-	        $("#content").text($xml);
+	        $("#content").text(JSON.stringify(data));
 	    });
 	}
 
