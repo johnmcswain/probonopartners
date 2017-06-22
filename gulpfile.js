@@ -13,12 +13,12 @@ gulp.task('css',function(){
 gulp.task('webpack', function() {
     return gulp.src('./src/app.js')
         .pipe(webpack(require('./webpack.config.js')))
-        .pipe(gulp.dest('./src/js/output/'));
+        .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('compress', function (cb) {
     pump([
-            gulp.src('./src/js/output/bundle.js'),
+            gulp.src('./build/bundle.js'),
             uglify(),
             gulp.dest('./www/js/')
         ],
@@ -27,4 +27,5 @@ gulp.task('compress', function (cb) {
 
 });
 
-gulp.task('default',['css','webpack','compress']);
+gulp.task('build',['webpack']);
+gulp.task('clean',['css','compress']);

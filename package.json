@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prep": "gulp",
+    "clean": "gulp clean",
+    "build": "gulp build",
     "platform-deploy": "cordova build"
   },
   "repository": {

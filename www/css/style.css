@@ -1,1 +1,1 @@
-body,html{font-family:sans-serif;color:#777}
+@import "bootstrap.min.css";body,html{font-family:sans-serif;color:#777}.navbar-default{height:30px;background-color:#222}.nav-button-wrapper{width:27%;float:left}.white{color:#fff}

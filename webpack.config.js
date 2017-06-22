@@ -3,7 +3,7 @@ const path = require('path');
 const config = {
     entry: './src/app.js',
     output: {
-        path: path.resolve(__dirname, './src/js/output/'),
+        path: path.resolve(__dirname, './build/'),
         filename: 'bundle.js'
     },
     module: {
